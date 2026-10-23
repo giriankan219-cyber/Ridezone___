@@ -1,0 +1,140 @@
+.Navbar{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+body{
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    color: gold;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+.Bikes, .About, .Home{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    top: 14px;
+}
+.Gallery1{
+  height: 32px;
+  width: 61px;
+  background-color: #fff;
+  color: #1eb2a1;
+  border: 10px;
+  border-radius: 10px;
+  position: relative;
+  top: 14px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.Home:hover, .Bikes:hover, .About:hover,.Gallery1:hover{
+  height: 32px;
+  width: 61px;
+  background-color: #fff;
+  color: #1eb2a1;
+  border: 10px;
+  border-radius: 10px;
+  transition: all 0.1s ease-in-out 0s;
+}
+.img_1st{
+    background-image: url("dark.jpeg");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+}
+.images{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 18px;
+    max-width: 1200px;
+    margin:0 auto;
+}
+
+.img{
+    object-fit: cover;
+    height: 180px;
+    width: 100%;
+    border-radius: 10px;
+}
+footer{
+    width: 100%;
+    height: auto; 
+    min-height: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    color: #fff;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+.foot{
+    position: static;
+}
+@media (max-width: 1024px) {
+    .images{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    nav{
+        flex-direction: row;
+        gap: 10px;
+    }
+    .first_nav{
+        top: 0;
+        font-size: 18px;
+    }
+    .img_1st{
+        height: 60vh;
+        font-size: 16px;
+    }
+    .images{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .img{
+        height: 160px;
+    }
+    .foot{
+    font-size: 10px;
+  }
+}
+@media (max-width: 480px) {
+    .images{
+        grid-template-columns: 1fr;
+    }
+    .img{
+        height: 200px;
+    }
+    .img_1st{
+        height: 50vh;
+    }
+}
+@media (max-width: 425px){
+  nav{
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
+
+  .Home, .Bikes, .About, .Gallery1{
+    position: static !important;
+    top: 0 !important;
+    font-size: 8px !important;
+    height: auto !important;
+    width: auto !important;
+    padding:6px 10px;
+  }
+ 
+}
