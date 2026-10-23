@@ -1,0 +1,268 @@
+.Navbar{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+body{
+    background-color: bisque;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.logo{
+  color: gold;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.Bikes, .Home, .Gallery{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    top: 14px;
+}
+.About1{
+  height: 32px;
+  width: 61px;
+  background-color: #fff;
+  color: #1eb2a1;
+ border: 10px;
+  border-radius: 10px;
+  position: relative;
+  top: 14px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.Home:hover, .Bikes:hover, .About1:hover,.Gallery:hover{
+  height: 32px;
+  width: 61px;
+  background-color: #fff;
+  color: #1eb2a1;
+  border: 10px;
+  border-radius: 10px;
+  transition: all 0.1s ease-in-out 0s;
+}
+.img_1st{
+    height: 100vh;
+    display: flex;
+    background-image: url("Showroom2.jpeg");
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.img_2nd{
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    background-color: #fff; 
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column; 
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    height: auto;
+    min-height: auto;
+    padding: 0; 
+}
+
+.img_2nd::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 350px;
+    background-image: url("Showroom.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.img_2nd h1{
+    position: static;
+    left: auto;
+    color: #000; 
+    margin: 20px 20px 10px 20px;
+    font-size: 28px;
+}
+
+.img_2nd pre{
+    position: static;
+    left: auto;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    white-space: pre-wrap; 
+    font-family: inherit;
+    margin: 0 20px 20px 20px;
+    line-height: 1.6;
+}
+
+.Trust{
+    background-color: rgba(255, 255, 255, 0.9);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    border-radius: 5px;
+    padding: 15px;
+}
+.Service_info{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(18, 202, 219,0.5);
+    border-radius: 5px;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+}
+.Sales, .Service, .Square_parts, .Accessories{
+    height: 150px;
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    color: #fff;
+    padding: 20px;
+}
+.Contact_wrap{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.Contact_info{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    font-size: 18px;
+    min-width: 250px;
+}
+.Contact_form{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 280px;
+}
+.Contact_form input{
+    width: 100%;
+    max-width: 350px;
+    height: 35px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.Contact_form button{
+    width: 200px;
+    height: 40px;
+    background-color: orangered;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+}
+
+footer{
+    width: 100%;
+    height: auto; 
+    min-height: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    color: #fff;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+.first_nav:focus{
+  color: orangered;
+}
+.foot{
+    position: static;
+}
+@media (max-width: 1024px){
+  .Trust{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .Service_info{
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px){
+  nav{
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+  }
+  .first_nav{
+    font-size: 16px;
+    top: 0;
+  }
+  .img_1st{
+    height: auto;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .img_2nd{
+    width: 100%;
+    height: 300px;
+    display: block;
+  }
+  .img_2nd h1, .img_2nd pre{
+    position: static;
+    left: 0;
+    text-align: center;
+    margin-top: 10px;
+    color: #000;
+  }
+  .Trust{
+    grid-template-columns: 1fr;
+  }
+  .Service_info{
+    flex-wrap: wrap;
+  }
+  .Contact_wrap{
+    flex-direction: column;
+  }
+  .Contact_form input{
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .foot{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px){
+  .Sales, .Service, .Square_parts, .Accessories{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+  footer{
+    font-size: 18px;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  .Contact_form button{
+    width: 100%;
+  }
+}
+@media (max-width: 425px){
+  nav{
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
+
+  .Home, .Bikes, .About1, .Gallery{
+    position: static !important;
+    top: 0 !important;
+    font-size: 8px !important;
+    height: auto !important;
+    width: auto !important;
+    padding: 6px 10px;
+  }
+}

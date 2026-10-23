@@ -1,0 +1,222 @@
+.Navbar{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+body{
+
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 0;
+}
+.logo{
+  color: gold;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+.Home, .About, .Gallery{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    top: 14px;
+}
+.Bikes{
+  height: 32px;
+  width: 61px;
+  background-color: #fff;
+  color: #1eb2a1;
+  border: 10px;
+  border-radius: 10px;
+  position: relative;
+  top: 14px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.Home:hover, .Bikes:hover, .About:hover,.Gallery:hover{
+  height: 32px;
+  width: 61px;
+  background-color: #fff;
+  color: #1eb2a1;
+ border: 10px;
+  border-radius: 10px;
+  transition: all 0.1s ease-in-out 0s;
+}
+.First_image{
+    background-image: url("Mountain.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.Text_image p{
+    color: #fff;
+}
+.bike-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 18px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bike-card{
+  background: #1c1c1e;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #2a2a2a;
+  transition: 0.3s;
+  background-position: center;
+  background-size: cover;
+}
+.bike-card:hover{
+  transform: translateY(-5px);
+  border-color: #444;
+  cursor: pointer;
+  box-shadow: 0 0 5px white,
+  0 0 15px white;
+  transition: all 0.1s ease-in-out 0s;
+}
+.first_nav:focus{
+  color: orangered;
+}
+.card-info{
+  padding: 12px 14px;
+}
+.card-info h4{
+  font-size: 14px;
+  color: #ddd;
+  margin: 0 0 6px 0;
+  font-weight: bold;
+}
+.card-info .price{
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 0 8px 0;
+}
+.card-info a{
+  font-size: 12px;
+  color: #a0a0a0;
+  text-decoration: none;
+}
+.card-info a:hover{
+  color: orangered;
+}
+.second_image{
+    width: 100%;
+    object-fit: cover;
+    height: 180px;
+    border-radius: 10px;
+}
+.Section h2{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+
+}
+.background{
+    background-image: url("Royal_enfield.jpeg");
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    color: whitesmoke;
+}
+.background_button{
+    background-color: orangered;
+    color: #fff;
+    border: 10px solid orangered;
+    border-radius: 5px;
+    font-weight: bold;
+    position: relative;
+    left: 2px;
+}
+.Background_info h1{
+    color: #ffd166;
+  }
+.Background_info h4{
+    color: #f1f1f1;
+  }
+  footer{
+    width: 100%;
+    height: auto; 
+    min-height: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    color: #fff;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+.foot{
+    position: static;
+}
+.background_button a{
+  text-decoration: none;
+  color: #fff;
+
+}
+  @media (max-width: 1024px){
+  .bike-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px){
+  nav{
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+  }
+  .first_nav{
+    font-size: 16px;
+    top: 0;
+  }
+  .First_image, .background{
+    height: auto;
+    padding: 60px 20px;
+  }
+  .bike-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .foot{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px){
+  .bike-grid{
+    grid-template-columns: 1fr;
+  }
+  .First_image, .background{
+    padding: 40px 15px;
+    text-align: center;
+    justify-content: center;
+  }
+  .Text_image p, .Background_info h1, .Background_info h4{
+    text-align: center;
+  }
+}
+@media (max-width: 425px){
+  nav{
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
+
+  .Home, .Bikes, .About, .Gallery{
+    position: static !important;
+    top: 0 !important;
+    font-size: 8px !important;
+    height: auto !important;
+    width: auto !important;
+    padding: 6px 10px;
+  }
+}
